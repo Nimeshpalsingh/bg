@@ -15,6 +15,3 @@ def remove_bg():
     img = request.files['image']
     result = remove(img.read())
     return send_file(io.BytesIO(result), mimetype='image/png')
-
-if __name__ == '__main__':
-    app.run()
